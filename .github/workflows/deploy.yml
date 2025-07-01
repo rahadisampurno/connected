@@ -28,6 +28,4 @@ jobs:
       uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./build # Ganti './build' dengan folder output dari npm run build (misal: './dist')
-        # Jika ini Project Page dan ingin disajikan di subfolder, tambahkan:
-        # publish_branch: gh-pages # Defaultnya sudah gh-pages, bisa dihilangkan
+        publish_dir: ./build 
