@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main # Ganti dengan branch utama kamu
+      - main # Pastikan ini branch utama Anda
 
 jobs:
   build-and-deploy:
@@ -28,4 +28,5 @@ jobs:
       uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./build 
+        publish_dir: ./dist # <--- Pastikan ini adalah './dist'
+        publish_branch: gh-pages # Biasanya ini defaultnya
