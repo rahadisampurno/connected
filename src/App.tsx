@@ -1,5 +1,7 @@
+// app.tsx
+
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Pastikan BrowserRouter di-import
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -12,7 +14,8 @@ import Benefits from './pages/Benefits';
 
 function App() {
   return (
-    <Router>
+    // Tambahkan basename di sini
+    <Router basename="/connected"> {/* <--- INI PENTING */}
       <div className="min-h-screen bg-white">
         <Header />
         <Routes>
